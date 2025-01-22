@@ -68,14 +68,22 @@ export default function Contact() {
 
     return (
         <div className="container text-center">
-            <h1>Hello {userName}</h1>
-            <form className="form" onSubmit={handleFormSubmit}>
+            <form className="form" onSubmit={handleFormSubmit} style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}>
                 <input
                     value={formData.name}
                     name="name"
                     onChange={handleInputChange}
                     type="text"
                     placeholder="Name"
+                    style={{
+                        backgroundColor: 'white',
+                        color: 'black',
+                    }}
                 />
                 <input
                     value={formData.email}
@@ -83,6 +91,10 @@ export default function Contact() {
                     onChange={handleInputChange}
                     type="email"
                     placeholder="E-mail"
+                    style={{
+                        backgroundColor: 'white',
+                        color: 'black',
+                    }}
                 />
                 <textarea
                     value={formData.message}
@@ -90,16 +102,24 @@ export default function Contact() {
                     onChange={handleInputChange}
                     placeholder="message"
                     rows="4"
+                    style={{
+                        backgroundColor: 'white',
+                        color: 'black',
+                    }}
                 />
-                <button type="submit">
+                <button 
+                    type="submit"
+                    style={{
+                        backgroundColor: 'lightblue',
+                    }}>
                     Submit
                 </button>
             </form>
-            {errors && (
+            {/* {{errors && (
                 <div>
                     <p className="error-text">{errors}</p>
                 </div>
-            )}
+            )}} */}
         </div>
     );
 }
