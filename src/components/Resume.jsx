@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayout from "./PageLayout";
-import '../styles/Resume.css';
+import '../styles/resume.css';
 
 export default function Resume() {
     //sets the function to execute when the button is clicked.
