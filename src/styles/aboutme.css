@@ -6,7 +6,8 @@
     gap: 1rem;
     background-color: var(--primary-light);
     border-radius: 8px;
-    width: var(--container-max-width)
+    width: var(--container-max-width);
+    padding-bottom: 1rem;
 }
 
 .about-content img {
