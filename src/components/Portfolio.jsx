@@ -1,7 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PageLayout from "./PageLayout";
-import '../styles/Portfolio.css';
+import '../styles/portfolio.css';
+
 export default function Portfolio() {
     const projects = [
         {
