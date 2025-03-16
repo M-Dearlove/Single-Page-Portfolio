@@ -1,56 +1,22 @@
-.page-container {
-    padding: 1rem;
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-  }
-  
-  .page-container.narrow {
-    max-width: var(--container-narrow-width);
-  }
-  
-  .page-container.form {
-    max-width: var(--container-form-width);
-  }
-  
-  .page-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .page-content {
-    background-color: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  /* About Me Styles */
-  .profile-image {
-    max-width: 250px;
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
-    display: block;
-  }
-  
-  /* Portfolio Styles */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  /* Contact Styles */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  /* Resume Styles */
-  .skills-list {
-    column-count: 2;
-    column-gap: 2rem;
-  }
+/* Unique page structure elements */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.page-content {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Resume specific styles */
+.skills-list {
+  column-count: 2;
+  column-gap: 2rem;
+}

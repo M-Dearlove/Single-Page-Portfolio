@@ -6,12 +6,17 @@
     gap: 1rem;
     background-color: var(--primary-light);
     border-radius: 8px;
-    width: var(--container-max-width);
-    padding-bottom: 1rem;
+    width: 100%;
+    max-width: var(--container-max-width);
+    padding: 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .about-content img {
-    width: 325px;
+    max-width: 100%;
+    width: auto;
+    max-width: 315px;
     color: var(--text-light);
     height: auto;
     padding-top: 1rem;
@@ -20,12 +25,22 @@
 
 .bio-text {
     background-color: var(--background-mid);
-    width: var(--container-narrow-width);
+    width: 100%;
+    max-width: var(--container-narrow-width);
     border-radius: 8px;
     padding: 1.5rem;
-}
+    box-sizing: border-box;
+  }
+
 .bio-text p {
     font-size: 1.2rem;
     color: var(--text-dark);
     padding-bottom: .5rem;
 }
+
+.profile-image {
+    max-width: 250px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }

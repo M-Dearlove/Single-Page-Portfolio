@@ -1,19 +1,28 @@
 .contact-container {
-    width: var(--container-max-width);
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
+
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    width: var(--container-narrow-width);
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: var(--container-narrow-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
   
   /* Form inputs and textarea */
   .contact-form input,
   .contact-form textarea {
     width: 100%;
+    min-width: 250px;
     padding: 0.75rem 1rem;
+    box-sizing: border-box;
     font-size: 1rem;
     border: 1px solid var(--primary-color);
     border-radius: 4px;
@@ -69,4 +78,18 @@
     color: var(--error);
     font-size: 0.875rem;
     margin: 0.25rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 90%;
+      max-width: 600px; /* Provide specific max-width for medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .contact-form {
+      width: 95%;
+      padding: 0; /* Remove padding at smaller screen sizes */
+    }
   }

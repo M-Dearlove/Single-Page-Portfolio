@@ -6,13 +6,16 @@
     margin-left: auto;
     gap: 15px;
     padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main-header-menu a {
     text-decoration: none;
     color: var(--text-light);
-    font-size: 1.5em;
+    font-size: clamp(1rem, 4vw, 1.5em);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .main-header-menu a:hover,

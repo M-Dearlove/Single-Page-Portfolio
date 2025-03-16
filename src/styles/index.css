@@ -23,6 +23,9 @@
   --container-narrow-width: 800px;      /* Narrower content like resume */
   --container-form-width: 600px;        /* Forms like contact */
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 a {
   font-weight: 500;
@@ -35,8 +38,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   font-synthesis: none;
@@ -49,6 +51,15 @@ body {
   font-family: var(--bs-body-font-family);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -116,12 +127,92 @@ footer a:hover {
   color: var(--accent-light);
 }
 
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img, video, iframe, table, pre, code {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 90%;
+    --container-narrow-width: 90%;
   }
-  
+}
+
+@media (max-width: 768px) {
   .skills-list {
     column-count: 1;
+  }
+
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  
+  .main-header-menu {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header-menu {
+    gap: 10px;
+  }
+  
+  .main-header-menu a {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --container-max-width: 95%;
+    --container-narrow-width: 95%;
+  }
+  
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  
+  .main-header-menu {
+    margin: 0;
+    padding: 0.5rem;
+  }
+  
+  .main-header-menu a {
+    font-size: 1.2em;
+  }
+  
+  .about-content img {
+    width: 80%;
+    max-width: 250px;
   }
 }
