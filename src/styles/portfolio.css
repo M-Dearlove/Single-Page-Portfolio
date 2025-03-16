@@ -1,0 +1,34 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 1.5rem; /* Space between cards */
+    width: var(--container-max-width);
+  }
+  
+  /* Individual project card */
+  .project-card {
+    background-color: var(--background-light);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Changed from grid to flex */
+    flex-direction: column;
+    height: 100%; /* Ensures all cards have the same height */
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: 992px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Small screens - 1 column */
+  @media (max-width: 576px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }

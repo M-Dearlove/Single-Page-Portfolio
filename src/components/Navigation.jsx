@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import '../styles/navigation.css';
 
 export default function Navigation() {
   const location = useLocation();
@@ -25,29 +26,15 @@ export default function Navigation() {
 
   return (
     <nav className="main-header-menu">
-      <section
-        style={{
-          display: 'flex',
-          fontFamily: 'helvetica',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '1rem',
-          maxWidth: '600px',
-          margin: '0 auto'
-        }}
-      >
         {navItems.map(({ path, label }) => (
-          <div key={path}>
             <Link
+              key={path}
               to={path}
               style={location.pathname === path ? activeLinkStyle : linkStyle}
             >
               {label}
             </Link>
-          </div>
         ))}
-      </section>
     </nav>
   );
 }

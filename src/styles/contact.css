@@ -1,0 +1,72 @@
+.contact-container {
+    width: var(--container-max-width);
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: var(--container-narrow-width);
+    margin: 0 auto;
+  }
+  
+  /* Form inputs and textarea */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: white;
+    color: var(--text-dark);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Focus state for inputs */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(10, 38, 71, 0.2);
+  }
+  
+  /* Textarea specific styling */
+  .contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  /* Submit button styling */
+  .contact-form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: var(--primary-light);
+  }
+  
+  /* Error message container */
+  .error-container {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid var(--error);
+  }
+  
+  /* Error text styling */
+  .error-text {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+  }

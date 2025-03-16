@@ -1,0 +1,30 @@
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    width: var(--container-max-width)
+}
+
+.about-content img {
+    width: 325px;
+    color: var(--text-light);
+    height: auto;
+    padding-top: 1rem;
+    border-radius: 10%;
+}
+
+.bio-text {
+    background-color: var(--background-mid);
+    width: var(--container-narrow-width);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+.bio-text p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    padding-bottom: .5rem;
+}

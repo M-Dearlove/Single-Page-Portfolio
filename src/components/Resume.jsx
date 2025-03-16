@@ -1,7 +1,9 @@
 import React from 'react';
+import PageLayout from "./PageLayout";
+import '../styles/Resume.css';
 
 export default function Resume() {
-    //sets the function to execture when the button is clicked.
+    //sets the function to execute when the button is clicked.
     const onButtonClick = () => {
         const fileURL = '/assets/Dearlove_resume.pdf';
 
@@ -13,24 +15,32 @@ export default function Resume() {
     };
 
     return (
-        <>
-            <div>
-                <h1>Resume</h1>
-                <h3>Click the button below to download to my resume.</h3>
-                <button style={{ backgroundColor: 'darkslategrey' }} onClick={onButtonClick}> Download Resume</button>
+        <PageLayout title="Resume" width="narrow">
+            <div className="resume-container">
+                <div className="resume-download">
+                    <h3>Click the button below to download my resume.</h3>
+                    <button className="download-button" onClick={onButtonClick}>Download Resume</button>
+                </div>
+                <div className="proficiencies">
+                    <h3>Proficiencies</h3>
+                    <ul className="skills-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Java</li>
+                        <li>Bootstrap</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>PostgreSQL</li>
+                        <li>Sequelize</li>
+                        <li>MongoDB</li>
+                        <li>Mongoose</li>
+                        <li>GraphQL</li>
+                        <li>NWScript</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h3>Proficiencies</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Node.JS</li>
-                    <li>Typescript</li>
-                    <li>PostgreSQL</li>
-                    <li>ReacyJS</li>
-                </ul>
-            </div>
-        </>
+        </PageLayout>
     );
 }

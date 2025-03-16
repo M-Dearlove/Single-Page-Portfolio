@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PageLayout from "./PageLayout";
+import '../styles/Contact.css';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -67,23 +69,15 @@ export default function Contact() {
     };
 
     return (
-        <div className="container text-center">
-            <form className="form" onSubmit={handleFormSubmit} style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-            }}>
+        <PageLayout title="Contact Me" width="form">
+            <div className="contact-container">
+            <form className="contact-form" onSubmit={handleFormSubmit}>
                 <input
                     value={formData.name}
                     name="name"
                     onChange={handleInputChange}
                     type="text"
                     placeholder="Name"
-                    style={{
-                        backgroundColor: 'white',
-                        color: 'black',
-                    }}
                 />
                 <input
                     value={formData.email}
@@ -91,10 +85,6 @@ export default function Contact() {
                     onChange={handleInputChange}
                     type="email"
                     placeholder="E-mail"
-                    style={{
-                        backgroundColor: 'white',
-                        color: 'black',
-                    }}
                 />
                 <textarea
                     value={formData.message}
@@ -102,24 +92,20 @@ export default function Contact() {
                     onChange={handleInputChange}
                     placeholder="message"
                     rows="4"
-                    style={{
-                        backgroundColor: 'white',
-                        color: 'black',
-                    }}
                 />
-                <button 
-                    type="submit"
-                    style={{
-                        backgroundColor: 'lightblue',
-                    }}>
+                <button
+                    type="submit">
                     Submit
                 </button>
             </form>
-            {/* {{errors && (
-                <div>
-                    <p className="error-text">{errors}</p>
+            </div>
+            {Object.keys(errors).length > 0 && (
+                <div className="error-container">
+                    {Object.values(errors).map((error, index) => (
+                        <p key={index} className="error-text">{error}</p>
+                    ))}
                 </div>
-            )}} */}
-        </div>
+            )}
+        </PageLayout>
     );
 }

@@ -1,4 +1,4 @@
-import './App.css'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import AboutMe from './components/AboutMe';
@@ -22,9 +22,7 @@ function App() {
         <main style={{
           flex: '1',
           padding: '2rem',
-          maxWidth: '100%',
           margin: '0 auto',
-          width: '100%'
         }}>
           <Routes>
             <Route path="/about-me" element={<AboutMe />} />
