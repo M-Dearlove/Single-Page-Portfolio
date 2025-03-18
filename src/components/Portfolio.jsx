@@ -18,7 +18,14 @@ export default function Portfolio() {
             link: "http://spoonfed-prod.onrender.com",
             github: "https://github.com/M-Dearlove/spoonfed",
             alt: "Spoonfed"
-        }
+        },
+        //{
+       //     title: "Candidate Search",
+        //    image: "/images/candidate-search.jpg",
+        //    link: "https://candidate-search-m46z.onrender.com/",
+        //    github: "https://github.com/M-Dearlove/Candidate_Search",
+        //    alt: "Candidate Search"
+        //}
     ]
 
     return (
