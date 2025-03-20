@@ -25,6 +25,13 @@ export default function Portfolio() {
             link: "https://candidate-search-m46z.onrender.com/",
             github: "https://github.com/M-Dearlove/Candidate_Search",
             alt: "Candidate Search"
+        },
+        {
+            title: "Kanban Board",
+            image: "/images/kanban.jpg",
+            link: "https://kanban-board-241a.onrender.com/",
+            github: "https://github.com/M-Dearlove/Kanban_Board",
+            alt: "Kanban Board"
         }
     ]
 
