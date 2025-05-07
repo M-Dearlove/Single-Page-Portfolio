@@ -32,6 +32,13 @@ export default function Portfolio() {
             link: "https://kanban-board-241a.onrender.com/",
             github: "https://github.com/M-Dearlove/Kanban_Board",
             alt: "Kanban Board"
+        },
+        {
+            title: "Sprout Space",
+            image: "/images/sproutspace.png",
+            link: "https://rendertest-v95r.onrender.com/",
+            github: "https://github.com/M-Dearlove/Sprout-Space",
+            alt: "Sprout Space"
         }
     ]
 

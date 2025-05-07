@@ -27,6 +27,13 @@
     transform: translateY(-5px);
   }
 
+  .card-body a {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+  }
   /* Medium screens - 2 columns */
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     .projects-grid {
